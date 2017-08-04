@@ -1,0 +1,10 @@
+cabal.project.local
+dist-newstyle
+dist
+.cabal-sandbox
+tags
+cabal.sandbox.config
+.boring
+_darcs/
+.cmd_history
+*~
