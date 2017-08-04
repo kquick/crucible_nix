@@ -78,34 +78,12 @@ let
 
               galois-matlab = haskellPackagesNew.callPackage ./galois-matlab.nix {};
 
-              # # $ cabal2nix -f-ipython SRC --extra-arguments z3 --extra-arguments yices --extra-arguments sally > grackle.nix
-              # grackle = pkgs.haskell.lib.disableSharedExecutables
-              #           (pkgs.haskell.lib.disableSharedLibraries
-              #            (pkgs.haskell.lib.overrideCabal
-              #             (haskellPackagesNew.callPackage ./grackle.nix {
-              #                yices = pkgs.yices;   # avoid haskell package of the same name
-              #                z3 = pkgs.z3;         # avoid haskell package of the same name
-              #                # ipython-kernel = null;  # recursion problem?! ipython-kernel;
-              #              })
-              #             (drv: {
-              #                  postConfigure = "export LD_LIBRARY_PATH=${yices}/lib:$LD_LIBRARY_PATH";
-              #                  shellHook = "export LD_LIBRARY_PATH=${yices}/lib:$LD_LIBRARY_PATH";
-              #                  executableHaskellDepends = drv.executableHaskellDepends ++ [ yices pkgs.z3 ];
-              #                  testHaskellDepends = drv.testHaskellDepends ++ [ yices pkgs.z3 ];
-              #                  executableSystemDepends = (drv.executableSystemDepends or []) ++ [ sally ];
-              #             })
-              #            ));
-
               language-sally = haskellPackagesNew.callPackage ./language-sally.nix {};
 
-              #llvm-pretty = haskellPackagesNew.callPackage ./llvm-pretty-0.7.1.0.nix {};
               llvm-pretty = haskellPackagesNew.callPackage ./llvm-pretty-20170725.nix {};
 
-              #llvm-pretty-bc-parser = haskellPackagesNew.callPackage ./llvm-pretty-bc-parser-0.3.2.0.nix {};
               llvm-pretty-bc-parser = haskellPackagesNew.callPackage ./llvm-pretty-bc-parser-0.4.0.0.nix {};
 
-              # $ cabal2nix https://github.comGaloisInc/parameterized-utils.git --revision=1c44b1f > parameterized-utils-0.1.9.nix
-              # parameterized-utils = haskellPackagesNew.callPackage ./parameterized-utils-0.1.9.nix {};
               parameterized-utils = haskellPackagesNew.callPackage ./parameterized-utils.nix {};
 
               th-abstraction = haskellPackagesNew.callPackage ./th-abstraction-0_1_x.nix {};
