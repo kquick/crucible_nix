@@ -27,7 +27,7 @@ declare -A projarg=([crucible]="--subpath crucible"
                     [crucible-abc]="--subpath crucible-abc"
                     [crucible-blt]="--subpath crucible-blt"
                     [crucible-llvm]="--subpath crucible-llvm"
-                    [galois-matlab]="--subpath crucible-llvm"
+                    [galois-matlab]="--subpath galois-matlab"
                    )
 
 declare -A cabal2nixarg=()
