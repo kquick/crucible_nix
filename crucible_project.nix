@@ -115,10 +115,10 @@ in
 #   $ nix-build --argstr compiler ghc7103 -A blt crucible_project.nix
 #   <same as above but with compiler version override>
 #
-#   $ nix-shell -A env crucible_project.nix
-#   nix-shell$ <environment with *all* dependencies>
+#   $ nix-shell -A crucible crucible_project.nix
+#   nix-shell$ <environment with crucible dependencies>
 #
-#   $ nix-shell -A blt.env crucible_project.nix
+#   $ nix-shell -A blt crucible_project.nix
 #   nix-shell$ <environment with blt dependencies>
 #
 #   $ echo "(import $(pwd)/crucible_project.nix {}).blt.env" > blt/dir/shell.nix
