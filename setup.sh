@@ -23,10 +23,7 @@ declare -A projloc=([language-sally]=https://github.com/GaloisInc/language-sally
                     [llvm-pretty-bc-parser]=cabal://llvm-pretty-bc-parser
                    )
 
-declare -A projarg=([language-sally]="--revision 34289ca05"
-                    [blt]="--revision 2ab49784"
-                    [parameterized-utils]="--revision 2461f7f0"
-                    [crucible]="--subpath crucible"
+declare -A projarg=([crucible]="--subpath crucible"
                     [crucible-abc]="--subpath crucible-abc"
                     [crucible-blt]="--subpath crucible-blt"
                     [crucible-llvm]="--subpath crucible-llvm"
