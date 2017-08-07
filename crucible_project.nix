@@ -80,9 +80,9 @@ let
 
               language-sally = haskellPackagesNew.callPackage ./language-sally.nix {};
 
-              llvm-pretty = haskellPackagesNew.callPackage ./llvm-pretty-20170725.nix {};
+              llvm-pretty = haskellPackagesNew.callPackage ./llvm-pretty.nix {};
 
-              llvm-pretty-bc-parser = haskellPackagesNew.callPackage ./llvm-pretty-bc-parser-0.4.0.0.nix {};
+              llvm-pretty-bc-parser = haskellPackagesNew.callPackage ./llvm-pretty-bc-parser.nix {};
 
               parameterized-utils = haskellPackagesNew.callPackage ./parameterized-utils.nix {};
 

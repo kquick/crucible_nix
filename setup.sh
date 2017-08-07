@@ -19,8 +19,8 @@ declare -A projloc=([language-sally]=https://github.com/GaloisInc/language-sally
                     [crucible-blt]=${crucible_root}/crucible.git
                     [crucible-llvm]=${crucible_root}/crucible.git
                     [galois-matlab]=${crucible_root}/crucible.git
-                    [llvm-pretty]=cabal://llvm-pretty-0.7.1.0
-                    [llvm-pretty-bc-parser]=cabal://llvm-pretty-bc-parser-0.3.2.0
+                    [llvm-pretty]=cabal://llvm-pretty
+                    [llvm-pretty-bc-parser]=cabal://llvm-pretty-bc-parser
                    )
 
 declare -A projarg=([language-sally]="--revision 34289ca05"
