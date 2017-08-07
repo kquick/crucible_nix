@@ -33,6 +33,8 @@ declare -A projarg=([language-sally]="--revision 34289ca05"
                     [galois-matlab]="--subpath crucible-llvm"
                    )
 
+declare -A cabal2nixarg=()
+
 for d in ${devroot}/dependencies/language-sally \
                    ${devroot}/dependencies/blt \
                    ${devroot}/dependencies/parameterized-utils \
@@ -49,10 +51,16 @@ for d in ${devroot}/dependencies/language-sally \
          ; do
     projname=$(basename $d)
     if [ -d $d -a -f ${d}/${projname}.cabal ] ; then
-        echo "cabal2nix $d > ${projname}.nix"
-        cabal2nix $d > ${projname}.nix
+        echo "cabal2nix $d ${cabal2nixarg[$projname]} > ${projname}.nix"
+        cabal2nix $d ${cabal2nixarg[$projname]} > ${projname}.nix
     else
-        echo "cabal2nix ${projloc[$projname]} ${projarg[$projname]} > ${projname}.nix"
-        cabal2nix ${projloc[$projname]} ${projarg[$projname]} > ${projname}.nix
+        cabalfile=$(find ${devroot} -name ${projname}.cabal)
+        if [ ! -z "$cabalfile" ] ; then
+            echo "cabal2nix $(dirname ${cabalfile}) ${cabal2nixarg[$projname]} > ${projname}.nix"
+            cabal2nix $(dirname ${cabalfile}) ${cabal2nixarg[$projname]} > ${projname}.nix
+        else
+            echo "cabal2nix ${projloc[$projname]} ${projarg[$projname]} ${cabal2nixarg[$projname]} > ${projname}.nix"
+            cabal2nix ${projloc[$projname]} ${projarg[$projname]} ${cabal2nixarg[$projname]} > ${projname}.nix
+        fi
     fi
 done
