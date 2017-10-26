@@ -8,7 +8,6 @@ fi
 devroot=${1}
 
 public_crucible_root=https://github.com/GaloisInc/crucible
-private_crucible_root=https://gitlab-int.galois.com/tanager
 crucible_root=${public_crucible_root}
 
 declare -A projloc=([language-sally]=https://github.com/GaloisInc/language-sally.git
@@ -32,32 +31,26 @@ declare -A projarg=([crucible]="--subpath crucible"
 
 declare -A cabal2nixarg=()
 
-for d in ${devroot}/dependencies/language-sally \
-                   ${devroot}/dependencies/blt \
-                   ${devroot}/dependencies/parameterized-utils \
-                   ${devroot}/dependencies/crucible/crucible \
-                   ${devroot}/dependencies/crucible/crucible-abc \
-                   ${devroot}/dependencies/crucible/crucible-blt \
-                   ${devroot}/dependencies/crucible/crucible-llvm \
-                   ${devroot}/dependencies/crucible/galois-matlab \
-                   ${devroot}/dependencies/llvm-pretty \
-                   ${devroot}/dependencies/llvm-pretty-bc-parser \
-                   ${devroot}/matlab-parser \
-                   ${devroot}/crucible-matlab \
-                   ${devroot}/grackle \
+for d in language-sally \
+             blt \
+             parameterized-utils \
+             crucible/crucible \
+             crucible/crucible-abc \
+             crucible/crucible-blt \
+             crucible/crucible-llvm \
+             crucible/galois-matlab \
+             llvm-pretty \
+             llvm-pretty-bc-parser \
+             galois-matlab \
          ; do
+    echo "#### $d"
     projname=$(basename $d)
-    if [ -d $d -a -f ${d}/${projname}.cabal ] ; then
-        echo "cabal2nix $d ${cabal2nixarg[$projname]} > ${projname}.nix"
-        cabal2nix $d ${cabal2nixarg[$projname]} > ${projname}.nix
+    cabalfile=$(find ${devroot} -name "${projname}.cabal")
+    if [ ! -z "${cabalfile}" ] ; then
+        echo "cabal2nix $(dirname ${cabalfile}) ${cabal2nixarg[$projname]} > ${projname}.nix #1"
+        cabal2nix $(dirname ${cabalfile}) ${cabal2nixarg[$projname]} > ${projname}.nix
     else
-        cabalfile=$(find ${devroot} -name ${projname}.cabal)
-        if [ ! -z "$cabalfile" ] ; then
-            echo "cabal2nix $(dirname ${cabalfile}) ${cabal2nixarg[$projname]} > ${projname}.nix"
-            cabal2nix $(dirname ${cabalfile}) ${cabal2nixarg[$projname]} > ${projname}.nix
-        else
-            echo "cabal2nix ${projloc[$projname]} ${projarg[$projname]} ${cabal2nixarg[$projname]} > ${projname}.nix"
-            cabal2nix ${projloc[$projname]} ${projarg[$projname]} ${cabal2nixarg[$projname]} > ${projname}.nix
-        fi
+        echo "cabal2nix ${projloc[$projname]} ${projarg[$projname]} ${cabal2nixarg[$projname]} > ${projname}.nix #2"
+        cabal2nix ${projloc[$projname]} ${projarg[$projname]} ${cabal2nixarg[$projname]} > ${projname}.nix
     fi
 done
