@@ -51,7 +51,7 @@ let
               #    $ cabal2nix local/path > pkgname.nix
 
               # cabal2nix /home/quick/work/Tanager/Split/blt-20170623 > blt.nix
-              # cabal2nix https://github.com:GaloisInc/blt.git > blt.nix
+              # cabal2nix https://github.com/GaloisInc/blt.git > blt.nix
               raw_blt = haskellPackagesNew.callPackage ./blt.nix {
                           # the cabal file specifies a dependency on the
                           # blt library, which is a C library that is
@@ -86,7 +86,7 @@ let
 
               parameterized-utils = haskellPackagesNew.callPackage ./parameterized-utils.nix {};
 
-              th-abstraction = haskellPackagesNew.callPackage ./th-abstraction-0_1_x.nix {};
+              th-abstraction = haskellPackagesNew.callPackage ./th-abstraction.nix {};
             };
           };
         };

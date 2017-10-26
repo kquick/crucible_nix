@@ -20,6 +20,7 @@ declare -A projloc=([language-sally]=https://github.com/GaloisInc/language-sally
                     [galois-matlab]=${crucible_root}/crucible.git
                     [llvm-pretty]=cabal://llvm-pretty
                     [llvm-pretty-bc-parser]=cabal://llvm-pretty-bc-parser
+                    [th-abstraction]=cabal://th-abstraction
                    )
 
 declare -A projarg=([crucible]="--subpath crucible"
@@ -42,6 +43,7 @@ for d in language-sally \
              llvm-pretty \
              llvm-pretty-bc-parser \
              galois-matlab \
+             th-abstraction \
          ; do
     echo "#### $d"
     projname=$(basename $d)
