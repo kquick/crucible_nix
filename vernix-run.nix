@@ -4,6 +4,7 @@
 , language-sally-src
 , parameterized-utils-src
 , vernix-src
+, projectdef
 }:
 with (import <nixpkgs> {});
 let
