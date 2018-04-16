@@ -11,7 +11,7 @@ package_spec = [
     Project('crucible'),
 
     HaskellPackage('language-sally', github),
-    HaskellPackage('blt', github),
+    HaskellPackage('blt', github, version='2ab4978'),
     HaskellPackage('parameterized-utils', github),
 
 

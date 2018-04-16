@@ -32,7 +32,7 @@
               },
               "blt-src": {
                 "type": "git",
-                "value": "https://github.com/GaloisInc/blt.git master 0",
+                "value": "https://github.com/GaloisInc/blt.git 2ab4978 0",
                 "emailresponsible": false
               },
               "crucible-llvm-src": {
@@ -101,7 +101,7 @@
               },
               "blt-src": {
                 "type": "git",
-                "value": "https://github.com/GaloisInc/blt.git master 0",
+                "value": "https://github.com/GaloisInc/blt.git 2ab4978 0",
                 "emailresponsible": false
               },
               "crucible-llvm-src": {
@@ -170,7 +170,7 @@
               },
               "blt-src": {
                 "type": "git",
-                "value": "https://github.com/GaloisInc/blt.git master 0",
+                "value": "https://github.com/GaloisInc/blt.git 2ab4978 0",
                 "emailresponsible": false
               },
               "crucible-llvm-src": {
@@ -239,7 +239,7 @@
               },
               "blt-src": {
                 "type": "git",
-                "value": "https://github.com/GaloisInc/blt.git master 0",
+                "value": "https://github.com/GaloisInc/blt.git 2ab4978 0",
                 "emailresponsible": false
               },
               "crucible-llvm-src": {
@@ -308,7 +308,7 @@
               },
               "blt-src": {
                 "type": "git",
-                "value": "https://github.com/GaloisInc/blt.git master 0",
+                "value": "https://github.com/GaloisInc/blt.git 2ab4978 0",
                 "emailresponsible": false
               },
               "crucible-llvm-src": {
@@ -377,7 +377,7 @@
               },
               "blt-src": {
                 "type": "git",
-                "value": "https://github.com/GaloisInc/blt.git master 0",
+                "value": "https://github.com/GaloisInc/blt.git 2ab4978 0",
                 "emailresponsible": false
               },
               "crucible-llvm-src": {
@@ -446,7 +446,7 @@
               },
               "blt-src": {
                 "type": "git",
-                "value": "https://github.com/GaloisInc/blt.git master 0",
+                "value": "https://github.com/GaloisInc/blt.git 2ab4978 0",
                 "emailresponsible": false
               },
               "crucible-llvm-src": {
@@ -515,7 +515,7 @@
               },
               "blt-src": {
                 "type": "git",
-                "value": "https://github.com/GaloisInc/blt.git master 0",
+                "value": "https://github.com/GaloisInc/blt.git 2ab4978 0",
                 "emailresponsible": false
               },
               "crucible-llvm-src": {
@@ -584,7 +584,7 @@
               },
               "blt-src": {
                 "type": "git",
-                "value": "https://github.com/GaloisInc/blt.git master 0",
+                "value": "https://github.com/GaloisInc/blt.git 2ab4978 0",
                 "emailresponsible": false
               },
               "crucible-llvm-src": {
@@ -653,7 +653,7 @@
               },
               "blt-src": {
                 "type": "git",
-                "value": "https://github.com/GaloisInc/blt.git master 0",
+                "value": "https://github.com/GaloisInc/blt.git 2ab4978 0",
                 "emailresponsible": false
               },
               "crucible-llvm-src": {
