@@ -30,7 +30,7 @@ in rec {
           galois-matlab: ${galois-matlab-src} \
           language-sally: ${language-sally-src} \
           parameterized-utils: ${parameterized-utils-src} \
-          here= ${projectdef}
+          here= ${projectdef} \
           --static --nolocal
         mkdir $out
         cp *.nix $out/;
