@@ -1,5 +1,4 @@
-{ blt-src
-, crucible-src
+{ crucible-src
 , crucible-llvm-src
 , galois-matlab-src
 , language-sally-src
@@ -25,7 +24,6 @@ in rec {
              https://hackage.haskell.org/01-index.tar.gz
         gunzip  hackage/01-index.tar.gz || mv hackage/01-index.tar.gz hackage/01-index.tar
         python3 $vernix/bin/vernix $src/crucible.vx2 --noisy \
-          blt: ${blt-src} \
           crucible: ${crucible-src} \
           crucible-llvm: ${crucible-llvm-src} \
           galois-matlab: ${galois-matlab-src} \
@@ -38,7 +36,7 @@ in rec {
       '';
     buildInputs = [ vernix pybuilder git cacert nix-prefetch-git cabal2nix cacert curl gzip ];
     src = ./.;
-    inherit vernix blt-src crucible-src crucible-llvm-src galois-matlab-src language-sally-src parameterized-utils-src;
+    inherit vernix crucible-src crucible-llvm-src galois-matlab-src language-sally-src parameterized-utils-src;
   };
 
   # Get the latest version.  The src override is not strictly.
