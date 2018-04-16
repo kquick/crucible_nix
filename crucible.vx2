@@ -11,19 +11,19 @@ package_spec = [
     Project('crucible'),
 
     HaskellPackage('language-sally', github),
-    HaskellPackage('blt', github, version='2ab4978'),
+    # HaskellPackage('blt', github, version='2ab4978'),
     HaskellPackage('parameterized-utils', github),
 
 
-    CBI_Variants(repo_branches = ['master', 'stable'],
-                 nixpkgs_version = [ 'master', 'nixos-unstable', 'nixos-18.03' ],
+    CBI_Variants(#repo_branches = ['master', 'stable'],
+                 nixpkgs_version = [ 'nixos-18.03',
+                                     'nixos-unstable',
+                                     # 'master',
+                 ],
                  ghcver = [ 'ghc822',
                             # 'ghc802',  # s-cargot tests need import of Data.Maybe
-                            'ghc841',
-                            'ghcHEAD'],
-
-                 # KWQ: profiling builds?
-                 # KWQ: a variant that is a version spec for a specific dependency (e.g. build with brick 0.26 and brick 0.31)
-                 # nixpkgs versions : unstable, stable, specific release versions
+                            # 'ghc841',
+                            # 'ghcHEAD',
+                 ],
     ),
 ] + crucible_pkgs()
