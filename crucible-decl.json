@@ -1,0 +1,24 @@
+{
+  "description": "Hydra crucible Project declaration",
+  "nixexprinput": "project_jobset",
+  "nixexprpath": "./release.nix",
+  "enabled": 1,
+  "hidden": false,
+  "checkinterval": 300,
+  "schedulingshares": 1,
+  "enableemail": true,
+  "emailoverride": "",
+  "keepnr": 3,
+  "inputs": {
+    "project_jobset": {
+      "type": "git",
+      "value": "https://github.com/kquick/crucible_nix",
+      "emailresponsible": false
+    },
+    "nixpkgs": {
+      "type": "git",
+      "value": "https://github.com/NixOS/nixpkgs-channels nixos-unstable",
+      "emailresponsible": false
+    }
+  }
+}
