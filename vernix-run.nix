@@ -31,7 +31,7 @@ in rec {
           language-sally: ${language-sally-src} \
           parameterized-utils: ${parameterized-utils-src} \
           here= $out \
-          $src = $out \
+          $src= $out \
           --static --nolocal
         mkdir $out
         cp *.nix $out/;
