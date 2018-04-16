@@ -79,6 +79,11 @@
                 "value": "crucible:projectbld:vernix_output",
                 "emailresponsible": true
               },
+              "projectdef": {
+                "type": "git",
+                "value": "https://github.com/kquick/crucible_nix",
+                "emailresponsible": true
+              },
               "centos7_rpm_closure": {
                 "type": "build",
                 "value": "vm_disk_images:rpmclosures:centos7_x86-64_rpm_closure",
@@ -141,6 +146,11 @@
               "projectbld": {
                 "type": "build",
                 "value": "crucible:projectbld:vernix_output",
+                "emailresponsible": true
+              },
+              "projectdef": {
+                "type": "git",
+                "value": "https://github.com/kquick/crucible_nix",
                 "emailresponsible": true
               },
               "centos7_rpm_closure": {
