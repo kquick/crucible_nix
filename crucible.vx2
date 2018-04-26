@@ -13,6 +13,9 @@ package_spec = [
     HaskellPackage('language-sally', github),
     # HaskellPackage('blt', github, version='2ab4978'),
     HaskellPackage('parameterized-utils', github),
+    HaskellPackage('llvm-pretty', github(team='elliottt'),
+                   # version = "d2fb5fc"
+    ),
 
 
     CBI_Variants(#repo_branches = ['master', 'stable'],
