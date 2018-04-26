@@ -2,6 +2,7 @@
 , crucible-llvm-src
 , galois-matlab-src
 , language-sally-src
+, llvm-pretty-src
 , parameterized-utils-src
 , vernix-src
 , projectdef
@@ -29,6 +30,7 @@ in rec {
           crucible-llvm= ${crucible-llvm-src}/crucible-llvm \
           galois-matlab= ${galois-matlab-src}/galois-matlab \
           language-sally= ${language-sally-src} \
+          llvm-pretty= ${llvm-pretty-src} \
           parameterized-utils= ${parameterized-utils-src} \
           here= $out \
           $src= $out \
@@ -39,7 +41,7 @@ in rec {
       '';
     buildInputs = [ vernix pybuilder git cacert nix-prefetch-git cabal2nix cacert curl gzip ];
     src = ./.;
-    inherit vernix crucible-src crucible-llvm-src galois-matlab-src language-sally-src parameterized-utils-src;
+    inherit vernix crucible-src crucible-llvm-src galois-matlab-src language-sally-src llvm-pretty-src parameterized-utils-src;
   };
 
   # Get the latest version.  The src override is not strictly.

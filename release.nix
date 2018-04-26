@@ -50,6 +50,11 @@
                 "value": "https://github.com/GaloisInc/language-sally.git master 0",
                 "emailresponsible": false
               },
+              "llvm-pretty-src": {
+                "type": "git",
+                "value": "https://github.com/elliottt/llvm-pretty.git master 0",
+                "emailresponsible": false
+              },
               "parameterized-utils-src": {
                 "type": "git",
                 "value": "https://github.com/GaloisInc/parameterized-utils.git master 0",
@@ -114,6 +119,11 @@
                 "value": "https://github.com/GaloisInc/language-sally.git master 0",
                 "emailresponsible": false
               },
+              "llvm-pretty-src": {
+                "type": "git",
+                "value": "https://github.com/elliottt/llvm-pretty.git master 0",
+                "emailresponsible": false
+              },
               "parameterized-utils-src": {
                 "type": "git",
                 "value": "https://github.com/GaloisInc/parameterized-utils.git master 0",
@@ -176,6 +186,11 @@
               "language-sally-src": {
                 "type": "git",
                 "value": "https://github.com/GaloisInc/language-sally.git master 0",
+                "emailresponsible": false
+              },
+              "llvm-pretty-src": {
+                "type": "git",
+                "value": "https://github.com/elliottt/llvm-pretty.git master 0",
                 "emailresponsible": false
               },
               "parameterized-utils-src": {
