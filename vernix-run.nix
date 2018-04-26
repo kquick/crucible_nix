@@ -25,17 +25,17 @@ in rec {
              https://hackage.haskell.org/01-index.tar.gz
         gunzip  hackage/01-index.tar.gz || mv hackage/01-index.tar.gz hackage/01-index.tar
         python3 $vernix/bin/vernix $src/crucible.vx2 --noisy \
-          crucible: ${crucible-src} \
-          crucible-llvm: ${crucible-llvm-src} \
-          galois-matlab: ${galois-matlab-src} \
-          language-sally: ${language-sally-src} \
-          parameterized-utils: ${parameterized-utils-src} \
+          crucible= ${crucible-src}/crucible \
+          crucible-llvm= ${crucible-llvm-src}/crucible-llvm \
+          galois-matlab= ${galois-matlab-src}/galois-matlab \
+          language-sally= ${language-sally-src} \
+          parameterized-utils= ${parameterized-utils-src} \
           here= $out \
           $src= $out \
-          --static --nolocal
+          --static --nolocal --allowUnfree
         mkdir $out
-        cp *.nix $out/;
-        cp $src/*.nix $out/;
+        cp --reflink=auto $src/*.nix $out/;
+        cp --reflink=auto --remove-destination *.nix $out/;
       '';
     buildInputs = [ vernix pybuilder git cacert nix-prefetch-git cabal2nix cacert curl gzip ];
     src = ./.;

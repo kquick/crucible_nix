@@ -9,9 +9,9 @@
       ''
         {
           "projectbld": {
-            "description": "Build project crucible nix description",
+            "description": "Build project crucible  nix description",
             "nixexprinput": "projectdef",
-            "nixexprpath": "./vernix-run.nix",
+            "nixexprpath": "vernix-run.nix",
             "enabled": 1,
             "hidden": false,
             "checkinterval": 300,
@@ -84,11 +84,6 @@
                 "value": "https://github.com/kquick/crucible_nix",
                 "emailresponsible": true
               },
-              "centos7_rpm_closure": {
-                "type": "build",
-                "value": "vm_disk_images:rpmclosures:centos7_x86-64_rpm_closure",
-                "emailresponsible": false
-              },
               "ghcver": {
                 "type": "string",
                 "value": "ghc822",
@@ -152,11 +147,6 @@
                 "type": "git",
                 "value": "https://github.com/kquick/crucible_nix",
                 "emailresponsible": true
-              },
-              "centos7_rpm_closure": {
-                "type": "build",
-                "value": "vm_disk_images:rpmclosures:centos7_x86-64_rpm_closure",
-                "emailresponsible": false
               },
               "ghcver": {
                 "type": "string",

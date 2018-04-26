@@ -1,7 +1,7 @@
 {
   "description": "Hydra crucible Project declaration",
   "nixexprinput": "project_jobset",
-  "nixexprpath": "./release.nix",
+  "nixexprpath": "release.nix",
   "enabled": 1,
   "hidden": false,
   "checkinterval": 300,
